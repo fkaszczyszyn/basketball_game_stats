@@ -67,6 +67,7 @@ def main():
                     team_name = teams[team_choice]
                     team_players = balanced_teams[team_name]
                     # Compile a list of player names and guardians.
+                    team_players = sorted(team_players, key=lambda x: x['height'])
                     player_names = [player['name'] for player in team_players]
                     guardians = []
                     for player in team_players:
